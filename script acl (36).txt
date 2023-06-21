@@ -123,7 +123,7 @@ close script8
 
 OPEN F01
 
-extract record to script9 if PLAFON >= BAKI_DEBET AND KD_ORIENTASI_PENGGUNAAN=3 AND KD_KUALITAS<>1
+extract record to script9 if PLAFON >= BAKI_DEBET AND KD_JENIS_PENGGUNAAN=3 AND KD_KUALITAS<>1
 
 CLOSE F01
 
@@ -351,7 +351,7 @@ close script27
 
 OPEN F01
 
-extract record to script29 if (CTOD(TGL_JATUH_TEMPO,'yyyymmdd') - BULAN_DATA_EOM) > 9125 AND KD_ORIENTASI_PENGGUNAAN = 3
+extract record to script29 if (CTOD(TGL_JATUH_TEMPO,'yyyymmdd') - BULAN_DATA_EOM) > 9125 AND KD_JENIS_PENGGUNAAN = 3
 
 CLOSE F01
 
@@ -375,7 +375,7 @@ close script30
 
 OPEN F01
 
-extract record to script31 if (KD_KATEGORI_DEBITUR <> "NU") AND KD_ORIENTASI_PENGGUNAAN = 3
+extract record to script31 if (KD_KATEGORI_DEBITUR <> "NU") AND KD_JENIS_PENGGUNAAN = 3
 
 CLOSE F01
 
@@ -387,7 +387,7 @@ close script31
 
 OPEN F01
 
-extract record to script32 if KD_JENIS_KREDIT = "P05" AND KD_ORIENTASI_PENGGUNAAN <> 3
+extract record to script32 if KD_JENIS_KREDIT = "P05" AND KD_JENIS_PENGGUNAAN <> 3
 
 CLOSE F01
 
@@ -399,7 +399,7 @@ close script32
 
 OPEN F01
 
-extract record to script33 if KD_ORIENTASI_PENGGUNAAN = 191 OR KD_ORIENTASI_PENGGUNAAN = 192
+extract record to script33 if KD_JENIS_PENGGUNAAN = 191 OR KD_JENIS_PENGGUNAAN = 192
 
 CLOSE F01
 
